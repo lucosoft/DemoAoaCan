@@ -1,0 +1,42 @@
+--- canpt.c
++++ canpt.c
+@@ -19,7 +19,7 @@
+ 
+ #include "stdio.h"
+ #include <string.h>
+-//#include "lpc17xx_can.h"
++#include "lpc17xx_can.h"
+ #include "board.h"
+ #include "canpt.h"
+ #include "time.h"
+@@ -820,18 +820,18 @@
+  *    CAN interrupt handler.
+  *
+  *****************************************************************************/
+-void CAN_IRQHandler (void)
+-{
+-  uint32_t intStatus = 0;
+-
+-  intStatus = LPC_CAN1->ICR;
+-
+-  if (intStatus & 0x01) {
+-//    CAN_ReceiveMsg(LPC_CAN1, &rxMsg);
+-//    q_put(&rxMsg);
+-  }
+-
+-}
++//void CAN_IRQHandler (void)
++//{
++//  uint32_t intStatus = 0;
++//
++//  intStatus = LPC_CAN1->ICR;
++//
++//  if (intStatus & 0x01) {
++////    CAN_ReceiveMsg(LPC_CAN1, &rxMsg);
++////    q_put(&rxMsg);
++//  }
++//
++//}
+ 
+ /******************************************************************************
+  *

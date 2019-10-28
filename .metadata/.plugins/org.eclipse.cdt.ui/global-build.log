@@ -1,0 +1,1550 @@
+16:01:00 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:01:01 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:327:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:771:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:338:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:363:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:398:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:609:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:446:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:672:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:690:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:741:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:759:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    980	      0	    356	   1336	    538	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:01:13 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:01:13 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:01:14 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:01:14 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+make: No se hace nada para «all».
+16:01:15 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:01:17 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:01:18 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:01:18 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__LPC17XX__ -DUSB_HOST_ONLY -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib/Drivers/USB" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20536	   3352	   1344	  25232	   6290	demo_aoa_can.axf
+ 
+16:05:05 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:05:05 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:05:06 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:05:06 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:328:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:772:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:339:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:364:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:399:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:610:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:447:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:673:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:691:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:760:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    988	      0	    356	   1344	    540	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:05:07 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:05:08 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:05:09 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:05:09 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20544	   3352	   1344	  25240	   6298	demo_aoa_can.axf
+ 
+16:23:26 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:23:27 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:23:27 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:23:28 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+make: No se hace nada para «all».
+16:23:28 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:23:29 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:23:30 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:23:30 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__LPC17XX__ -DUSB_HOST_ONLY -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib/Drivers/USB" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20432	   3352	   1344	  25128	   6228	demo_aoa_can.axf
+ 
+16:26:03 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:26:04 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:26:04 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:26:04 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:328:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:772:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:339:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:364:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:399:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:610:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:447:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:673:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:691:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:742:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:760:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    980	      0	    356	   1336	    538	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:26:06 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:26:06 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:26:07 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:26:08 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__LPC17XX__ -DUSB_HOST_ONLY -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib/Drivers/USB" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20536	   3352	   1344	  25232	   6290	demo_aoa_can.axf
+ 
+16:33:46 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:33:46 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:33:47 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:33:47 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:328:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:773:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:339:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:364:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:399:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:611:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:447:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:674:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:692:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:743:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:761:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    988	      0	    356	   1344	    540	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:33:48 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:33:49 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:33:50 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:33:50 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20544	   3352	   1344	  25240	   6298	demo_aoa_can.axf
+ 
+16:37:43 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:37:44 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:37:45 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:37:45 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+make: No se hace nada para «all».
+16:37:46 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:37:47 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:37:47 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:37:48 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20544	   3352	   1344	  25240	   6298	demo_aoa_can.axf
+ 
+16:40:06 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:40:06 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:40:07 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:40:07 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:328:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:773:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:339:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:364:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:399:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:611:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:447:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:674:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:692:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:743:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:761:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    988	      0	    356	   1344	    540	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:40:09 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:40:09 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:40:10 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:40:11 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20544	   3352	   1344	  25240	   6298	demo_aoa_can.axf
+ 
+16:42:37 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:42:38 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:42:39 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:42:39 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:774:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:612:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:675:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:693:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:744:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:762:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    996	      0	    356	   1352	    548	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:42:40 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:42:41 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:42:41 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:42:42 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20552	   3352	   1344	  25248	   62a0	demo_aoa_can.axf
+ 
+16:44:16 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:44:17 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:44:17 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:44:17 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:775:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:613:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:676:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:694:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:745:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:763:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    992	      0	    356	   1348	    544	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:44:19 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:44:19 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:44:20 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:44:21 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20544	   3352	   1344	  25240	   6298	demo_aoa_can.axf
+ 
+16:53:21 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:53:22 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:53:23 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:53:23 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:775:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:613:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:676:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:694:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:745:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:763:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    992	      0	    356	   1348	    544	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:53:24 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:53:25 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:53:26 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:53:26 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20544	   3352	   1344	  25240	   6298	demo_aoa_can.axf
+ 
+16:55:04 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:55:06 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:55:07 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:55:08 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:775:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:613:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:676:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:694:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:745:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:763:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    992	      0	    356	   1348	    544	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:55:11 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:55:11 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:55:12 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:55:13 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building file: ../src/main.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__LPC17XX__ -DUSB_HOST_ONLY -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib/Drivers/USB" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
+Finished building: ../src/main.c
+ 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20432	   3352	   1344	  25128	   6228	demo_aoa_can.axf
+ 
+16:56:53 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:56:54 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:56:54 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:56:55 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:775:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:613:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:676:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:694:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:745:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:763:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    992	      0	    356	   1348	    544	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:56:56 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:56:57 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:56:58 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:56:58 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20432	   3352	   1344	  25128	   6228	demo_aoa_can.axf
+ 
+16:58:30 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+16:58:30 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+16:58:30 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+16:58:31 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:775:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:613:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:676:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:694:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:745:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:763:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    996	      0	    356	   1352	    548	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+16:58:32 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+16:58:33 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+16:58:33 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+16:58:34 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20432	   3352	   1344	  25128	   6228	demo_aoa_can.axf
+ 
+17:13:24 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+17:13:25 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+17:13:26 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+17:13:26 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:777:12: warning: unused variable 'to' [-Wunused-variable]
+   uint32_t to = 0;
+            ^
+../src/canpt.c:776:12: warning: unused variable 's' [-Wunused-variable]
+   uint32_t s = 0;
+            ^
+../src/canpt.c:775:11: warning: unused variable 'err' [-Wunused-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c:774:10: warning: unused variable 'status' [-Wunused-variable]
+   Status status;
+          ^
+../src/canpt.c:773:17: warning: variable 'msg' set but not used [-Wunused-but-set-variable]
+   CAN_MSG_Type *msg;
+                 ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:613:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:676:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:694:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:745:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:763:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    932	      0	    356	   1288	    508	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+17:13:27 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+17:13:28 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+17:13:29 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+17:13:29 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20024	   3352	   1344	  24720	   6090	demo_aoa_can.axf
+ 
+17:18:02 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+17:18:03 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+17:18:03 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+17:18:03 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:780:12: warning: unused variable 'to' [-Wunused-variable]
+   uint32_t to = 0;
+            ^
+../src/canpt.c:779:12: warning: unused variable 's' [-Wunused-variable]
+   uint32_t s = 0;
+            ^
+../src/canpt.c:778:11: warning: unused variable 'err' [-Wunused-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c:777:10: warning: unused variable 'status' [-Wunused-variable]
+   Status status;
+          ^
+../src/canpt.c:776:17: warning: variable 'msg' set but not used [-Wunused-but-set-variable]
+   CAN_MSG_Type *msg;
+                 ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:616:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:679:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:697:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:748:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:766:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+    944	      0	    356	   1300	    514	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+17:18:05 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+17:18:05 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+17:18:06 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+17:18:07 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20040	   3352	   1344	  24736	   60a0	demo_aoa_can.axf
+ 
+17:20:54 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+make all 
+make: No se hace nada para «all».
+17:20:55 **** Incremental Build of configuration Debug for project Lib_MCU ****
+make all 
+make: No se hace nada para «all».
+17:20:55 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+make all 
+make: No se hace nada para «all».
+17:20:55 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:778:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:616:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:679:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:697:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:748:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:766:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+   1000	      0	    356	   1356	    54c	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+17:20:56 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+17:20:57 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+make pre-build main-build 
+if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+ 
+make: No se hace nada para «main-build».
+17:20:58 **** Incremental Build of configuration Debug for project Lib_AOA ****
+make all 
+make: No se hace nada para «all».
+17:20:59 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+make all 
+Building target: demo_aoa_can.axf
+Invoking: MCU Linker
+arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+Finished building target: demo_aoa_can.axf
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+   text	   data	    bss	    dec	    hex	filename
+  20440	   3352	   1344	  25136	   6230	demo_aoa_can.axf
+ 

@@ -1,0 +1,162 @@
+--- global-build.log
++++ global-build.log
+@@ -1,3 +1,3 @@
+-12:55:25 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
++11:23:45 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+ make all 
+ make: No se hace nada para «all».
+@@ -2,5 +2,5 @@
+ make all 
+ make: No se hace nada para «all».
+-12:55:25 **** Incremental Build of configuration Debug for project Lib_MCU ****
++11:23:45 **** Incremental Build of configuration Debug for project Lib_MCU ****
+ make all 
+ make: No se hace nada para «all».
+@@ -5,5 +5,5 @@
+ make all 
+ make: No se hace nada para «all».
+-12:55:25 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
++11:23:45 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+ make all 
+ make: No se hace nada para «all».
+@@ -8,6 +8,6 @@
+ make all 
+ make: No se hace nada para «all».
+-12:55:26 **** Incremental Build of configuration Debug for project Lib_Board ****
++11:23:46 **** Incremental Build of configuration Debug for project Lib_Board ****
+ make all 
+ Building file: ../src/canpt.c
+ Invoking: MCU C Compiler
+@@ -38,7 +38,7 @@
+    text	   data	    bss	    dec	    hex	filename
+    1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+      64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+-   1092	      0	    328	   1420	    58c	canpt.o (ex libLib_Board.a)
++   1080	      0	    328	   1408	    580	canpt.o (ex libLib_Board.a)
+       0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+     624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+    3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+@@ -46,6 +46,6 @@
+     124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+    2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+  
+-12:55:26 **** Incremental Build of configuration Debug for project Lib_lwip ****
++11:23:46 **** Incremental Build of configuration Debug for project Lib_lwip ****
+ make all 
+ make: No se hace nada para «all».
+@@ -50,7 +50,7 @@
+ make all 
+ make: No se hace nada para «all».
+-12:55:27 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
++11:23:47 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+ make pre-build main-build 
+ if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+  
+ make: No se hace nada para «main-build».
+@@ -53,7 +53,7 @@
+ make pre-build main-build 
+ if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+  
+ make: No se hace nada para «main-build».
+-12:55:27 **** Incremental Build of configuration Debug for project Lib_AOA ****
++11:23:47 **** Incremental Build of configuration Debug for project Lib_AOA ****
+ make all 
+ make: No se hace nada para «all».
+@@ -58,6 +58,51 @@
+ make all 
+ make: No se hace nada para «all».
+-12:55:28 **** Incremental Build of configuration Debug for project demo_aoa_can ****
++11:23:48 **** Incremental Build of configuration Debug for project demo_aoa_can ****
++make all 
++Building file: ../src/main.c
++Invoking: MCU C Compiler
++arm-none-eabi-gcc -DDEBUG -D__LPC17XX__ -DUSB_HOST_ONLY -D__USE_CMSIS=CMSISv2p00_LPC17xx -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/demo_aoa_can/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/nxpUSBlib/Drivers/USB" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_AOA/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc" -O0 -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/main.d" -MT"src/main.d" -o "src/main.o" "../src/main.c"
++../src/main.c: In function 'CAN_IRQHandler':
++../src/main.c:126:5: warning: implicit declaration of function 'q_put' [-Wimplicit-function-declaration]
++     q_put(&rxMsg);
++     ^
++Finished building: ../src/main.c
++ 
++Building target: demo_aoa_can.axf
++Invoking: MCU Linker
++arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
++Finished building target: demo_aoa_can.axf
++ 
++make --no-print-directory post-build
++Performing post-build steps
++arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
++   text	   data	    bss	    dec	    hex	filename
++  20184	   3352	   1344	  24880	   6130	demo_aoa_can.axf
++ 
++11:23:52 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
++make all 
++make: No se hace nada para «all».
++11:23:52 **** Incremental Build of configuration Debug for project Lib_MCU ****
++make all 
++make: No se hace nada para «all».
++11:23:53 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
++make all 
++make: No se hace nada para «all».
++11:23:53 **** Incremental Build of configuration Debug for project Lib_Board ****
++make all 
++make: No se hace nada para «all».
++11:23:53 **** Incremental Build of configuration Debug for project Lib_lwip ****
++make all 
++make: No se hace nada para «all».
++11:23:54 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
++make pre-build main-build 
++if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
++ 
++make: No se hace nada para «main-build».
++11:23:55 **** Incremental Build of configuration Debug for project Lib_AOA ****
++make all 
++make: No se hace nada para «all».
++11:23:55 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+ make all 
+ Building target: demo_aoa_can.axf
+ Invoking: MCU Linker
+@@ -68,5 +113,5 @@
+ Performing post-build steps
+ arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+    text	   data	    bss	    dec	    hex	filename
+-  19864	   3352	   1344	  24560	   5ff0	demo_aoa_can.axf
++  20184	   3352	   1344	  24880	   6130	demo_aoa_can.axf
+  
+@@ -72,37 +117,1 @@
+  
+-12:55:39 **** Incremental Build of configuration Debug for project Lib_CMSISv2p00_LPC17xx ****
+-make all 
+-make: No se hace nada para «all».
+-12:55:39 **** Incremental Build of configuration Debug for project Lib_MCU ****
+-make all 
+-make: No se hace nada para «all».
+-12:55:40 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+-make all 
+-make: No se hace nada para «all».
+-12:55:40 **** Incremental Build of configuration Debug for project Lib_Board ****
+-make all 
+-make: No se hace nada para «all».
+-12:55:40 **** Incremental Build of configuration Debug for project Lib_lwip ****
+-make all 
+-make: No se hace nada para «all».
+-12:55:41 **** Incremental Build of configuration LPC17xx_Host for project nxpUSBlib ****
+-make pre-build main-build 
+-if test -f "libnxpUSBlib.a" ; then cp -f "libnxpUSBlib.a" ../"libnxpUSBlib.a" ; fi
+- 
+-make: No se hace nada para «main-build».
+-12:55:42 **** Incremental Build of configuration Debug for project Lib_AOA ****
+-make all 
+-make: No se hace nada para «all».
+-12:55:42 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+-make all 
+-Building target: demo_aoa_can.axf
+-Invoking: MCU Linker
+-arm-none-eabi-gcc -nostdlib -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/nxpUSBlib" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_FatFs_SD/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/Debug" -L"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/DemoAoaCan/Lib_AOA/Debug" -Xlinker --gc-sections -Xlinker -Map=demo_aoa_can.map -mcpu=cortex-m3 -mthumb -T "demo_aoa_can_Debug.ld" -o "demo_aoa_can.axf"  ./src/AndroidAccessoryHost.o ./src/GPIO.o ./src/cr_startup_lpc17.o ./src/main.o   -lLib_CMSISv2p00_LPC17xx -lLib_FatFs_SD -lLib_AOA -lnxpUSBlib -lLib_Board -lLib_MCU
+-Finished building target: demo_aoa_can.axf
+- 
+-make --no-print-directory post-build
+-Performing post-build steps
+-arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+-   text	   data	    bss	    dec	    hex	filename
+-  19864	   3352	   1344	  24560	   5ff0	demo_aoa_can.axf
+- 

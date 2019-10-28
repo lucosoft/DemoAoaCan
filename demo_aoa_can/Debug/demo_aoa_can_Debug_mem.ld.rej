@@ -1,0 +1,11 @@
+--- demo_aoa_can_Debug_mem.ld
++++ demo_aoa_can_Debug_mem.ld
+@@ -4,7 +4,7 @@
+  * (c) NXP Semiconductors 2013-2014
+  * Linker script memory definitions
+  * Created from LinkMemoryTemplate
+- * By LPCXpresso v7.2.0 [Build 153] [2014-05-19]  on Tue Aug 19 12:55:42 ART 2014)
++ * By LPCXpresso v7.2.0 [Build 153] [2014-05-19]  on Thu Aug 28 11:23:55 ART 2014)
+ */
+ 
+ MEMORY

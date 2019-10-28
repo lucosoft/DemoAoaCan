@@ -1,0 +1,111 @@
+/*****************************************************************************
+ *
+ *   Copyright(C) 2011, Embedded Artists AB
+ *   All rights reserved.
+ *
+ ******************************************************************************
+ * Software that is described herein is for illustrative purposes only
+ * which provides customers with programming information regarding the
+ * products. This software is supplied "AS IS" without any warranties.
+ * Embedded Artists AB assumes no responsibility or liability for the
+ * use of the software, conveys no license or title under any patent,
+ * copyright, or mask work right to the product. Embedded Artists AB
+ * reserves the right to make changes in the software without
+ * notification. Embedded Artists AB also make no representation or
+ * warranty that such application will be suitable for the specified
+ * use without further testing or modification.
+ *****************************************************************************/
+
+/******************************************************************************
+ * Includes
+ *****************************************************************************/
+
+#include "lpc17xx_pinsel.h"
+#include "lpc17xx_gpio.h"
+#include "lpc17xx_ssp.h"
+#include "lpc17xx_uart.h"
+#include "lpc17xx_timer.h"
+#include "lpc17xx_can.h"
+#include <string.h>
+#include <stdio.h>
+
+#include "board.h"
+#include "canpt.h"
+#include "AndroidAccessoryHost.h"
+
+/******************************************************************************
+ * Typdefs and defines
+ *****************************************************************************/
+
+#define DISCOVER_TIME_MS (5000)
+
+/******************************************************************************
+ * Local variables
+ *****************************************************************************/
+
+static uint32_t msTicks = 0;
+//static uint32_t lastDiscover = 0;
+
+static uint32_t msTicksL = 0;
+
+CAN_MSG_Type txMsg;
+CAN_MSG_Type rxMsg;
+
+
+/******************************************************************************
+ * Local functions
+ *****************************************************************************/
+
+uint32_t getMsTicks(void)
+{
+  return msTicks;
+}
+
+void SysTick_Handler(void) {
+  msTicks++;
+  msTicksL++;
+
+}
+
+void check_failed(uint8_t *file, uint32_t line)
+{
+  /* User can add his own implementation to report the file name and line number,
+	 ex: printf("Wrong parameters value: file %s on line %d\r\n", file, line) */
+
+  /* Infinite loop */
+  while(1);
+}
+
+/******************************************************************************
+ * Public functions
+ *****************************************************************************/
+
+int main (void)
+{
+
+  SysTick_Config(SystemCoreClock / 1000);
+
+  canpt_init();
+
+
+
+  while(1)
+  {
+	canpt_task();
+
+    if (100 < msTicksL)
+    {
+    	msTicksL = 0;
+
+    	canpt_sendMessage(LPC_CAN1, CANPT_NODE_CAN1_UNIQUE_ID, 8);
+
+    }
+
+  }
+
+
+}
+
+
+
+

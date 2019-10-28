@@ -1,0 +1,15 @@
+--- Lib_lwip.build.log
++++ Lib_lwip.build.log
+@@ -1,4 +1,4 @@
+-12:55:40 **** Incremental Build of configuration Debug for project Lib_lwip ****
++11:23:53 **** Incremental Build of configuration Debug for project Lib_lwip ****
+ make all 
+ make: No se hace nada para «all».
+ 
+@@ -2,5 +2,5 @@
+ make all 
+ make: No se hace nada para «all».
+ 
+-12:55:41 Build Finished (took 67ms)
++11:23:54 Build Finished (took 66ms)
+ 

@@ -1,0 +1,22 @@
+--- demo_aoa_can.build.log
++++ demo_aoa_can.build.log
+@@ -1,4 +1,4 @@
+-12:55:42 **** Incremental Build of configuration Debug for project demo_aoa_can ****
++11:23:55 **** Incremental Build of configuration Debug for project demo_aoa_can ****
+ make all 
+ Building target: demo_aoa_can.axf
+ Invoking: MCU Linker
+@@ -9,6 +9,6 @@
+ Performing post-build steps
+ arm-none-eabi-size demo_aoa_can.axf; # arm-none-eabi-objdump -h -S demo_aoa_can.axf >demo_aoa_can.lss
+    text	   data	    bss	    dec	    hex	filename
+-  19864	   3352	   1344	  24560	   5ff0	demo_aoa_can.axf
++  20184	   3352	   1344	  24880	   6130	demo_aoa_can.axf
+  
+ 
+@@ -13,4 +13,4 @@
+  
+ 
+-12:55:42 Build Finished (took 162ms)
++11:23:55 Build Finished (took 132ms)
+ 

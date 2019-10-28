@@ -1,0 +1,22 @@
+--- main.c
++++ main.c
+@@ -115,16 +115,7 @@
+  *    CAN interrupt handler.
+  *
+  *****************************************************************************/
+-//void CAN_IRQHandler (void)
+-//{
+-//  uint32_t intStatus = 0;
+-//
+-//  intStatus = LPC_CAN1->ICR;
+-//
+-//  if (intStatus & 0x01) {
+-//    CAN_ReceiveMsg(LPC_CAN1, &rxMsg);
+-//    q_put(&rxMsg);
+-//  }
+-//
+-//}
++void CAN_IRQHandler (void)
++{
++  uint32_t intStatus = 0;
+ 

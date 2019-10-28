@@ -1,0 +1,15 @@
+--- Lib_Board.build.log
++++ Lib_Board.build.log
+@@ -1,4 +1,4 @@
+-12:55:40 **** Incremental Build of configuration Debug for project Lib_Board ****
++11:23:53 **** Incremental Build of configuration Debug for project Lib_Board ****
+ make all 
+ make: No se hace nada para «all».
+ 
+@@ -2,5 +2,5 @@
+ make all 
+ make: No se hace nada para «all».
+ 
+-12:55:40 Build Finished (took 65ms)
++11:23:53 Build Finished (took 70ms)
+ 

@@ -1,0 +1,6 @@
+17:20:56 **** Incremental Build of configuration Debug for project Lib_lwip ****
+make all 
+make: No se hace nada para «all».
+
+17:20:57 Build Finished (took 216ms)
+

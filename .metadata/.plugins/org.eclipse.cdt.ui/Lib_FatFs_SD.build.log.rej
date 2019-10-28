@@ -1,0 +1,15 @@
+--- Lib_FatFs_SD.build.log
++++ Lib_FatFs_SD.build.log
+@@ -1,4 +1,4 @@
+-12:55:40 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
++11:23:53 **** Incremental Build of configuration Debug for project Lib_FatFs_SD ****
+ make all 
+ make: No se hace nada para «all».
+ 
+@@ -2,5 +2,5 @@
+ make all 
+ make: No se hace nada para «all».
+ 
+-12:55:40 Build Finished (took 62ms)
++11:23:53 Build Finished (took 75ms)
+ 

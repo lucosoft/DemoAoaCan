@@ -1,0 +1,42 @@
+--- canpt.d
++++ canpt.d
+@@ -1,9 +1,8 @@
+ src/canpt.d: ../src/canpt.c \
+- /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/inc/board.h \
+- /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc17xx_uart.h \
++ /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc17xx_can.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc/LPC17xx.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc/core_cm3.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc/core_cmInstr.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc/core_cmFunc.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc/system_LPC17xx.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc_types.h \
+@@ -10,7 +11,6 @@
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/inc/canpt.h \
+- /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc17xx_can.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/inc/time.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/demo_aoa_can/inc/GPIO.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/demo_aoa_can/inc/My_Types.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc_types.h
+ 
+@@ -12,11 +12,9 @@
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/inc/time.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/demo_aoa_can/inc/GPIO.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/demo_aoa_can/inc/My_Types.h \
+  /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc_types.h
+ 
+-/home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/inc/board.h:
+-
+-/home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc17xx_uart.h:
++/home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc17xx_can.h:
+ 
+ /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc/LPC17xx.h:
+ 
+@@ -33,7 +35,5 @@
+ /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/inc/canpt.h:
+ 
+-/home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_MCU/inc/lpc17xx_can.h:
+-
+ /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/Lib_Board/inc/time.h:
+ 
+ /home/laboratorio/VirtualBox\ VMs/Compartida\ AltiumLpc_XP/Interfaz\ CAN/Firmware/Ubuntu/DemoAoaCan/demo_aoa_can/inc/GPIO.h:

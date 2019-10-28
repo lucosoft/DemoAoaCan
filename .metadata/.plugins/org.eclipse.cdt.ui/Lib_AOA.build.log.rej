@@ -1,0 +1,15 @@
+--- Lib_AOA.build.log
++++ Lib_AOA.build.log
+@@ -1,4 +1,4 @@
+-12:55:42 **** Incremental Build of configuration Debug for project Lib_AOA ****
++11:23:55 **** Incremental Build of configuration Debug for project Lib_AOA ****
+ make all 
+ make: No se hace nada para «all».
+ 
+@@ -2,5 +2,5 @@
+ make all 
+ make: No se hace nada para «all».
+ 
+-12:55:42 Build Finished (took 70ms)
++11:23:55 Build Finished (took 57ms)
+ 

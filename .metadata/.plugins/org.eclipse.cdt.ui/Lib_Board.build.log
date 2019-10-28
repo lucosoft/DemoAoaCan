@@ -1,0 +1,72 @@
+17:20:55 **** Incremental Build of configuration Debug for project Lib_Board ****
+make all 
+Building file: ../src/canpt.c
+Invoking: MCU C Compiler
+arm-none-eabi-gcc -DDEBUG -D__CODE_RED -D__REDLIB__ -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_CMSISv2p00_LPC17xx/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/port" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_lwip/src/include/ipv4" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_Board/inc" -I"/home/laboratorio/VirtualBox VMs/Compartida AltiumLpc_XP/Interfaz CAN/Firmware/Ubuntu/Version Ultima Aux/DemoAoaCan/Lib_MCU/inc" -Og -g3 -Wall -c -fmessage-length=0 -fno-builtin -ffunction-sections -mcpu=cortex-m3 -mthumb -D__REDLIB__ -specs=redlib.specs -MMD -MP -MF"src/canpt.d" -MT"src/canpt.d" -o "src/canpt.o" "../src/canpt.c"
+../src/canpt.c: In function 'canpt_poll':
+../src/canpt.c:329:1: warning: no return statement in function returning non-void [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_task':
+../src/canpt.c:778:11: warning: variable 'err' set but not used [-Wunused-but-set-variable]
+   error_t err = ERR_OK;
+           ^
+../src/canpt.c: At top level:
+../src/canpt.c:340:13: warning: 'processCmnMessage' defined but not used [-Wunused-function]
+ static void processCmnMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:365:13: warning: 'processMessage' defined but not used [-Wunused-function]
+ static void processMessage(CAN_MSG_Type* msg)
+             ^
+../src/canpt.c:400:13: warning: 'checkIfNodesAlive' defined but not used [-Wunused-function]
+ static void checkIfNodesAlive(void)
+             ^
+../src/canpt.c: In function 'canpt_discover':
+../src/canpt.c:616:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_getValue':
+../src/canpt.c:448:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setRgb':
+../src/canpt.c:679:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_setLed':
+../src/canpt.c:697:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_subscribe':
+../src/canpt.c:748:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+../src/canpt.c: In function 'canpt_unsubscribe':
+../src/canpt.c:766:1: warning: control reaches end of non-void function [-Wreturn-type]
+ }
+ ^
+Finished building: ../src/canpt.c
+ 
+Building target: libLib_Board.a
+Invoking: MCU Archiver
+arm-none-eabi-ar -r  "libLib_Board.a"  ./src/board.o ./src/btn.o ./src/canpt.o ./src/eadebug.o ./src/eeprom.o ./src/rfpt.o ./src/rgb.o ./src/time.o ./src/xbee.o   
+arm-none-eabi-ar: creating libLib_Board.a
+Finished building target: libLib_Board.a
+ 
+make --no-print-directory post-build
+Performing post-build steps
+arm-none-eabi-size libLib_Board.a ; # arm-none-eabi-objdump -h -S libLib_Board.a >libLib_Board.lss
+   text	   data	    bss	    dec	    hex	filename
+   1164	      0	    564	   1728	    6c0	board.o (ex libLib_Board.a)
+     64	      0	      0	     64	     40	btn.o (ex libLib_Board.a)
+   1000	      0	    356	   1356	    54c	canpt.o (ex libLib_Board.a)
+      0	      0	      0	      0	      0	eadebug.o (ex libLib_Board.a)
+    624	      8	      4	    636	    27c	eeprom.o (ex libLib_Board.a)
+   3204	     16	    736	   3956	    f74	rfpt.o (ex libLib_Board.a)
+    260	      0	      0	    260	    104	rgb.o (ex libLib_Board.a)
+    124	      0	      4	    128	     80	time.o (ex libLib_Board.a)
+   2704	      1	    220	   2925	    b6d	xbee.o (ex libLib_Board.a)
+ 
+
+17:20:56 Build Finished (took 710ms)
+
